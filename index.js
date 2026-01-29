@@ -13,6 +13,11 @@ app.get('/', (req, res) => {
     res.json({ message: "Server is running successfully!" });
 });
 
+app.post('/', (req, res) => {
+    let name = req.body.name || "Unknown";
+    res.json({ message: `Hello ${name}! We received your post request!` })
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
