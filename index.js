@@ -1,6 +1,9 @@
 import 'dotenv/config';
 import express from 'express';
 import morgan from 'morgan';
+import sqlite from 'node:sqlite'
+import { DatabaseSync } from 'node:sqlite'
+const database = new DatabaseSync('db/auth.db')
 
 const app = express();
 
