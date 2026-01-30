@@ -1,9 +1,9 @@
 import express from 'express';
-import { getRoot, postRoot } from '../controllers/auth.controller.js';
+import { getAuth, postAuth } from '../controllers/auth.controller.js';
 
 const router = express.Router();
 
-router.get('/', getRoot);
-router.post('/', postRoot);
+router.get('/', getAuth);
+router.post('/', postAuth);
 
 export default router;
